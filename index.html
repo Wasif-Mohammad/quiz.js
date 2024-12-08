@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="auth">
+    <h2>Signup/Login</h2>
+    <form id="authForm">
+      <input type="text" id="username" placeholder="Enter Username" required>
+      <input type="password" id="password" placeholder="Enter Password" required>
+      <button type="submit" id="authButton">Signup/Login</button>
+    </form>
+    <p id="error"></p>
+  </div>
+
+  <div id="home" class="hidden">
+    <h1>Welcome, <span id="user"></span>!</h1>
+    <div class="cards">
+      <div class="card" data-topic="HTML">HTML Quiz</div>
+      <div class="card" data-topic="CSS">CSS Quiz</div>
+      <div class="card" data-topic="JavaScript">JavaScript Quiz</div>
+    </div>
+  </div>
+
+  <div id="quiz" class="hidden">
+    <h2 id="quizTopic"></h2>
+    <p id="timer">Time Left: 60s</p>
+    <div id="questionContainer"></div>
+    <button id="nextButton" class="hidden">Next</button>
+  </div>
+
+  <div id="result" class="hidden">
+    <h2>Quiz Completed!</h2>
+    <p id="score"></p>
+    <button id="retry">Retry</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
